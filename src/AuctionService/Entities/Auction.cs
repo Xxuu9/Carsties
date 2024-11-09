@@ -9,7 +9,7 @@ public int ReservePrice{get;set;}
 
 public string Seller{get;set;}
 
-public string Winnder{get;set;}
+public string Winner{get;set;}
 
 public int? SoldAmount{get;set;}
 
