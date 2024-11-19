@@ -25,7 +25,7 @@ public class AuctionUpdatedConsumer : IConsumer<AuctionUpdated>
         Console.WriteLine("--> Consuming auction updated: "+context.Message.Id);
         Console.WriteLine("--> Consuming auction updated: 》〉》"+context.Message);
 
-Console.WriteLine(JsonSerializer.Serialize(context.Message, new JsonSerializerOptions { WriteIndented = true }));
+        Console.WriteLine(JsonSerializer.Serialize(context.Message, new JsonSerializerOptions { WriteIndented = true }));
 
         var item = _mapper.Map<Item>(context.Message);
 
