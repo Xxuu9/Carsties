@@ -29,8 +29,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - RabbitMq_Host=rabbitmq
-      - ConnectionStrings_DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgrespw;Database=auctions
+      - RabbitMq__Host=rabbitmq
+      - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgrespw;Database=auctions
       - IdentityServiceUrl=http://identity-svc
     ports:
       - 7001:80
@@ -45,8 +45,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - RabbitMq_Host=rabbitmq
-      - ConnectionStrings_MongoDbConnection=mongodb://root:mongopw@mongodb
+      - RabbitMq__Host=rabbitmq
+      - ConnectionStrings__MongoDbConnection=mongodb://root:mongopw@mongodb:27017
       - AuctionServiceUrl=http://auction-svc
     ports:
       - 7002:80
@@ -61,7 +61,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgrespw;Database=identity
+      - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgrespw;Database=identity
     ports:
       - 5001:80
     depends_on:
