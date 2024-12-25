@@ -1,7 +1,7 @@
 "use client";
-import { Button, TextInput } from "flowbite-react";
-import React, { useEffect, useReducer } from "react";
-import { FieldValue, FieldValues, useForm } from "react-hook-form";
+import { Button } from "flowbite-react";
+import React, { useEffect } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 import Input from "../components/Input";
 import DateInput from "../components/DateInput";
 import { createAuction, updateAuction } from "../actions/auctionActions";
@@ -32,7 +32,7 @@ export default function AuctionForm({ auction }: Props) {
       reset({ make, model, color, mileage, year });
     }
     setFocus("make");
-  }, [setFocus]);
+  }, [setFocus, auction, reset]);
 
   async function onSubmit(data: FieldValues) {
     try {
